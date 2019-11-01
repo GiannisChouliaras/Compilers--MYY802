@@ -1,0 +1,16 @@
+program TEST
+    declare a,b,c;
+
+    function F1(in x)
+        return x
+    endfunction
+
+    a:=2;
+    b:=a+1;
+    if(a<b) then
+        a:=b+c;
+    else
+        a:=F1(in c)
+    endif;
+
+endprogram

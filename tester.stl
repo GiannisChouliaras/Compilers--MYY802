@@ -1,0 +1,87 @@
+program tester
+    declare x,y,z;
+
+    function p1(in x, inout z, inout v)
+        declare a;
+
+        function p2(inout z)
+            declare q;
+//comment here. Hi!
+            function p3(inout a, inout b)
+                declare k;
+                    incase
+                        when (a>x) : print a
+                        when (x<y) : print a+b
+                    endincase;
+
+                    if (v<>0) then
+                        v:=z+b;
+                        a:= 1
+                    else
+                        a:=v/b
+                    endif;
+
+                    dowhile
+                        a:=a+1
+                    enddowhile(a>2);
+
+                    q:=x;
+                    return k
+            endfunction
+
+/* BIIIIG COMMENT HERE
+    2447 KALOUDIS SPYRIDWN
+    2631 CHOULIARAS IOANNIS
+
+    this code will not run
+    x:=2447;
+    y:=2631;
+                            */
+
+            q:= y+v;
+            z:=q*x;
+            v:= p3(inout q, inout v);
+            return a;
+        endfunction
+
+        if (x<y) then
+            x:= x+y
+        else
+            y := x*y
+        endif;
+        z:= p2(inout z);
+        return z;
+
+    endfunction
+
+    function p2(in ax, inout ddz, inout vff)
+            z:= y+vff;
+            z:=ax*x;
+            x:= p1(in ax, inout v, inout ax);
+            return z;
+    endfunction
+
+
+    x:=1;
+    y:=2;
+    z:= p1(in x+y, inout z);
+
+    forcase
+        when (x>y) : print x
+        when (y<y) : print x+y
+        default: print y enddefault
+    endforcase;
+
+    while (x<=y)
+        x:=x+1
+    endwhile;
+
+    loop
+        if (z>x) then
+            exit
+        else
+            z:=z+1
+        endif
+    endloop;
+
+endprogram
